@@ -1,0 +1,53 @@
+body {
+    color: #778586;
+    font-family: Georgia, serif;
+}
+
+header {
+    display: flex;
+}
+
+header button {
+    margin: 0 auto;
+    background-color: #c9d2d7;
+    color: #929da2;
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+    outline: none;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+    );
+}
+
+header h1 {
+    margin: 0;
+    font-weight: normal;
+}
+
+main {
+    display: grid;
+    margin: 1rem auto;
+}
+
+.chosen {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chosen h2 {
+    /*height: 40px;*/
+    flex: 0 1 75%;
+}
+
+.chosen img {
+}
+
+.chosen span {
+}
