@@ -32,22 +32,47 @@ header h1 {
 }
 
 main {
-    display: grid;
     margin: 1rem auto;
 }
 
 .chosen {
     display: flex;
+    width: 50%;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .chosen h2 {
-    /*height: 40px;*/
-    flex: 0 1 75%;
+    width: 100%;
 }
 
 .chosen img {
+    height: 50%;
 }
 
-.chosen span {
+.chosen span.temperature {
+    font-size: 50px;
+}
+
+ul.info {
+    list-style: none;
+    width: 50%;
+}
+
+ul.info li {
+    background-color: #a7afb1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+    padding: 1%;
+}
+
+ul.info li span {
+    color: #c9d2d7;
+}
+
+.wrap {
+    display: flex;
 }
