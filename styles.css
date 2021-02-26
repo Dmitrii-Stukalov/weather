@@ -7,7 +7,20 @@ header {
     display: flex;
 }
 
-header button {
+header button.desktop {
+    margin: 0 auto;
+    background-color: #c9d2d7;
+    color: #929da2;
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+    outline: none;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+header button.mobile {
+    display: none;
     margin: 0 auto;
     background-color: #c9d2d7;
     color: #929da2;
@@ -45,7 +58,7 @@ main {
 
 .chosen h2 {
     width: 100%;
-    font-size: 40px;
+    font-size: 250%;
 }
 
 .chosen img {
@@ -53,7 +66,7 @@ main {
 }
 
 .chosen span.temperature {
-    font-size: 72px;
+    font-size: 500%;
 }
 
 ul.info {
@@ -87,7 +100,7 @@ ul.info li span {
 .favourite h2 {
     margin: auto 1%;
     width: 48%;
-    font-size: 40px;
+    font-size: 300%;
 }
 
 .favourite label {
@@ -150,12 +163,12 @@ ul.info li span {
 }
 
 .favourite ul .city h3 {
-    font-size: 30px;
+    font-size: 200%;
 }
 
 
 .favourite ul .city span {
-    font-size: 45px;
+    font-size: 300%;
 }
 
 .favourite ul.info {
@@ -186,4 +199,53 @@ ul.info li span {
             rgba(155, 155, 155, 0.5),
             rgba(155, 155, 155, 0.5)
     );
+}
+
+@media screen and (max-width: 700px) {
+    header button.mobile {
+        display: inline-block;
+        font-size: 200%;
+        width: auto;
+    }
+
+    header button.desktop {
+        display: none;
+    }
+
+    .favourite ul li {
+        width: 100%;
+    }
+
+    .wrap {
+        flex-wrap: wrap;
+    }
+
+    .chosen {
+        width: 100%;
+    }
+
+    .wrap ul {
+        width: 100%;
+    }
+
+    .chosen span.temperature {
+        /*font-size: 200%;*/
+    }
+
+    .favourite h2 {
+        width: 100%;
+    }
+
+    .favourite label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .favourite .city button {
+        align-self: center;
+    }
+
+    .favourite .city span {
+        align-self: center;
+    }
 }
