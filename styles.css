@@ -40,7 +40,7 @@ header button:hover {
 }
 
 header h1 {
-    margin: 0;
+    margin: auto 1%;
     font-weight: normal;
 }
 
@@ -57,6 +57,7 @@ main {
 }
 
 .chosen h2 {
+    margin: 2%;
     width: 100%;
     font-size: 250%;
 }
@@ -71,7 +72,9 @@ main {
 
 ul.info {
     list-style: none;
-    width: 50%;
+    width: 48%;
+    margin: auto 1%;
+    padding: 0;
 }
 
 ul.info li {
@@ -103,13 +106,14 @@ ul.info li span {
     font-size: 300%;
 }
 
-.favourite label {
-    width: 48%;
+.favourite form {
+    width: 47%;
     text-align: right;
-    margin: auto 1%;
+    margin: auto 0.5%;
+    padding-right: 1%;
 }
 
-.favourite label input {
+.favourite form input {
     border: none;
     border-radius: 5px;
     background-color: #f1f1f1;
@@ -118,21 +122,22 @@ ul.info li span {
     outline: none;
 }
 
-.favourite label button {
+.favourite button {
     background-color: #708188;
     color: white;
     outline: none;
-    font-size: 150%;
+    font-size: 2vw;
     border: none;
     border-radius: 50%;
     transition: .3s all;
     cursor: pointer;
-    padding: 2%;
-    height: 50%;
-    width: 7.5%;
+    padding: 0;
+    justify-content: center;
+    height: 3.5vw;
+    width: 3.5vw;
 }
 
-.favourite label button:hover {
+.favourite form button:hover {
     background: linear-gradient(
             rgba(155, 155, 155, 0.5),
             rgba(155, 155, 155, 0.5)
@@ -158,17 +163,19 @@ ul.info li span {
 
 .favourite ul .city {
     display: flex;
-    padding: 0 2%;
+    padding: 0 1%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .favourite ul .city h3 {
-    font-size: 200%;
+    font-size: 2rem;
+    margin: 0;
 }
 
 
 .favourite ul .city span {
-    font-size: 300%;
+    font-size: 3rem;
 }
 
 .favourite ul.info {
@@ -180,19 +187,20 @@ ul.info li span {
     width: 100%;
 }
 
-.favourite ul button {
-    background-color: #708188;
-    color: white;
-    outline: none;
-    font-size: 150%;
-    border: none;
-    border-radius: 50%;
-    transition: .3s all;
-    cursor: pointer;
-    padding: 2%;
-    height: 50%;
-    width: 7.5%;
-}
+/*.favourite  button {*/
+/*    background-color: #708188;*/
+/*    color: white;*/
+/*    outline: none;*/
+/*    font-size: 1.5rem;*/
+/*    border: none;*/
+/*    border-radius: 50%;*/
+/*    transition: .3s all;*/
+/*    cursor: pointer;*/
+/*    padding: 0;*/
+/*    justify-content: center;*/
+/*    height: 5vw;*/
+/*    width: 5vw;*/
+/*}*/
 
 .favourite ul button:hover {
     background: linear-gradient(
@@ -212,6 +220,11 @@ ul.info li span {
         display: none;
     }
 
+    header h1 {
+        margin: auto 2%;
+        font-weight: normal;
+    }
+
     .favourite ul li {
         width: 100%;
     }
@@ -228,24 +241,41 @@ ul.info li span {
         width: 100%;
     }
 
-    .chosen span.temperature {
-        /*font-size: 200%;*/
-    }
-
     .favourite h2 {
         width: 100%;
     }
 
-    .favourite label {
+    .favourite form {
         width: 100%;
-        text-align: center;
+        text-align: left;
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .favourite .city button {
-        align-self: center;
+    .favourite form input {
+        width: 85%;
+        margin: 1%;
+        padding: 3% 1%;
     }
 
-    .favourite .city span {
-        align-self: center;
+    .favourite button {
+        width: 9vw;
+        height: 9vw;
+        font-size: 7vw;
     }
+
+    .favourite ul .city h3 {
+        font-size: 2rem;
+    }
+
+    .favourite ul .city span {
+        font-size: 2rem;
+    }
+
+    .favourite ul .city img {
+        width: 18%;
+    }
+
 }
