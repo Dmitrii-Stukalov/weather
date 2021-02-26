@@ -45,6 +45,7 @@ main {
 
 .chosen h2 {
     width: 100%;
+    font-size: 40px;
 }
 
 .chosen img {
@@ -52,7 +53,7 @@ main {
 }
 
 .chosen span.temperature {
-    font-size: 50px;
+    font-size: 72px;
 }
 
 ul.info {
@@ -84,13 +85,15 @@ ul.info li span {
 }
 
 .favourite h2 {
-    width: 50%;
+    margin: auto 1%;
+    width: 48%;
+    font-size: 40px;
 }
 
 .favourite label {
-    width: 50%;
+    width: 48%;
     text-align: right;
-    margin: auto;
+    margin: auto 1%;
 }
 
 .favourite label input {
@@ -132,16 +135,27 @@ ul.info li span {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin-left: 1%;
+    margin: 0;
 }
 
 .favourite ul li {
-    width: 50%;
+    width: 48%;
+    margin: 1%;
 }
 
 .favourite ul .city {
     display: flex;
-    justify-content: space-around;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.favourite ul .city h3 {
+    font-size: 30px;
+}
+
+
+.favourite ul .city span {
+    font-size: 45px;
 }
 
 .favourite ul.info {
@@ -151,4 +165,25 @@ ul.info li span {
 
 .favourite ul.info li {
     width: 100%;
+}
+
+.favourite ul button {
+    background-color: #708188;
+    color: white;
+    outline: none;
+    font-size: 150%;
+    border: none;
+    border-radius: 50%;
+    transition: .3s all;
+    cursor: pointer;
+    padding: 2%;
+    height: 50%;
+    width: 7.5%;
+}
+
+.favourite ul button:hover {
+    background: linear-gradient(
+            rgba(155, 155, 155, 0.5),
+            rgba(155, 155, 155, 0.5)
+    );
 }
