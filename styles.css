@@ -48,6 +48,20 @@ main {
     margin: 1rem auto;
 }
 
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 300%;
+}
+
+.placeholder span {
+    background-color: #c9d2d7;
+    text-align: center;
+    height: 4vw;
+    width: 6vw;
+}
+
 .chosen {
     display: flex;
     width: 50%;
@@ -91,7 +105,7 @@ ul.info li span {
 }
 
 .wrap {
-    display: flex;
+    display: none;
 }
 
 .favourite {

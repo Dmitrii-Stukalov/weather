@@ -20,12 +20,16 @@
             <span class="temperature">8˚C</span>
         </div>
         <ul class="info">
-            <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>
-            <li>Облачность <span>Broken clouds</span></li>
-            <li>Давление <span>1013 hpa</span></li>
-            <li>Влажность <span>52%</span></li>
-            <li>Координаты <span>[59.88, 30.42]</span></li>
+            <li>Ветер <span class="wind">Moderate breeze, 6.0 m/s, North-northwest</span></li>
+            <li>Облачность <span class="cloudiness">Broken clouds</span></li>
+            <li>Давление <span class="pressure">1013 hpa</span></li>
+            <li>Влажность <span class="humidity">52%</span></li>
+            <li>Координаты <span class="coordinates">[59.88, 30.42]</span></li>
         </ul>
+    </div>
+    <div class="placeholder">
+        <h2>Подождите, данные загружаются</h2>
+        <span>&#x21bb;</span>
     </div>
     <div class="favourite">
         <h2>Избранное</h2>
@@ -35,98 +39,99 @@
         </form>
 
         <ul>
-            <li>
-                <div class="city">
-                    <h3>Moscow</h3>
-                    <span>5˚C</span>
-                    <img alt="weather icon" src="clouds-64.ico">
-                    <button>x</button>
-                </div>
-                <ul class="info">
-                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>
-                    <li>Облачность <span>Broken clouds</span></li>
-                    <li>Давление <span>1013 hpa</span></li>
-                    <li>Влажность <span>52%</span></li>
-                    <li>Координаты <span>[59.88, 30.42]</span></li>
-                </ul>
-            </li>
-            <li>
-                <div class="city">
-                    <h3>Helsinki</h3>
-                    <span>3˚C</span>
-                    <img alt="weather icon" src="clouds-64.ico">
-                    <button>x</button>
-                </div>
-                <ul class="info">
-                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>
-                    <li>Облачность <span>Broken clouds</span></li>
-                    <li>Давление <span>1013 hpa</span></li>
-                    <li>Влажность <span>52%</span></li>
-                    <li>Координаты <span>[59.88, 30.42]</span></li>
-                </ul>
-            </li>
-            <li>
-                <div class="city">
-                    <h3>Moscow</h3>
-                    <span>5˚C</span>
-                    <img alt="weather icon" src="clouds-64.ico">
-                    <button>x</button>
-                </div>
-                <ul class="info">
-                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>
-                    <li>Облачность <span>Broken clouds</span></li>
-                    <li>Давление <span>1013 hpa</span></li>
-                    <li>Влажность <span>52%</span></li>
-                    <li>Координаты <span>[59.88, 30.42]</span></li>
-                </ul>
-            </li>
-            <li>
-                <div class="city">
-                    <h3>Helsinki</h3>
-                    <span>3˚C</span>
-                    <img alt="weather icon" src="clouds-64.ico">
-                    <button>x</button>
-                </div>
-                <ul class="info">
-                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>
-                    <li>Облачность <span>Broken clouds</span></li>
-                    <li>Давление <span>1013 hpa</span></li>
-                    <li>Влажность <span>52%</span></li>
-                    <li>Координаты <span>[59.88, 30.42]</span></li>
-                </ul>
-            </li>
-            <li>
-                <div class="city">
-                    <h3>Moscow</h3>
-                    <span>5˚C</span>
-                    <img alt="weather icon" src="clouds-64.ico">
-                    <button>x</button>
-                </div>
-                <ul class="info">
-                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>
-                    <li>Облачность <span>Broken clouds</span></li>
-                    <li>Давление <span>1013 hpa</span></li>
-                    <li>Влажность <span>52%</span></li>
-                    <li>Координаты <span>[59.88, 30.42]</span></li>
-                </ul>
-            </li>
-            <li>
-                <div class="city">
-                    <h3>Helsinki</h3>
-                    <span>3˚C</span>
-                    <img alt="weather icon" src="clouds-64.ico">
-                    <button>x</button>
-                </div>
-                <ul class="info">
-                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>
-                    <li>Облачность <span>Broken clouds</span></li>
-                    <li>Давление <span>1013 hpa</span></li>
-                    <li>Влажность <span>52%</span></li>
-                    <li>Координаты <span>[59.88, 30.42]</span></li>
-                </ul>
-            </li>
+<!--            <li>-->
+<!--                <div class="city">-->
+<!--                    <h3>Moscow</h3>-->
+<!--                    <span>5˚C</span>-->
+<!--                    <img alt="weather icon" src="clouds-64.ico">-->
+<!--                    <button type="submit">x</button>-->
+<!--                </div>-->
+<!--                <ul class="info">-->
+<!--                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>-->
+<!--                    <li>Облачность <span>Broken clouds</span></li>-->
+<!--                    <li>Давление <span>1013 hpa</span></li>-->
+<!--                    <li>Влажность <span>52%</span></li>-->
+<!--                    <li>Координаты <span>[59.88, 30.42]</span></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="city">-->
+<!--                    <h3>Helsinki</h3>-->
+<!--                    <span>3˚C</span>-->
+<!--                    <img alt="weather icon" src="clouds-64.ico">-->
+<!--                    <button>x</button>-->
+<!--                </div>-->
+<!--                <ul class="info">-->
+<!--                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>-->
+<!--                    <li>Облачность <span>Broken clouds</span></li>-->
+<!--                    <li>Давление <span>1013 hpa</span></li>-->
+<!--                    <li>Влажность <span>52%</span></li>-->
+<!--                    <li>Координаты <span>[59.88, 30.42]</span></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="city">-->
+<!--                    <h3>Moscow</h3>-->
+<!--                    <span>5˚C</span>-->
+<!--                    <img alt="weather icon" src="clouds-64.ico">-->
+<!--                    <button>x</button>-->
+<!--                </div>-->
+<!--                <ul class="info">-->
+<!--                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>-->
+<!--                    <li>Облачность <span>Broken clouds</span></li>-->
+<!--                    <li>Давление <span>1013 hpa</span></li>-->
+<!--                    <li>Влажность <span>52%</span></li>-->
+<!--                    <li>Координаты <span>[59.88, 30.42]</span></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="city">-->
+<!--                    <h3>Helsinki</h3>-->
+<!--                    <span>3˚C</span>-->
+<!--                    <img alt="weather icon" src="clouds-64.ico">-->
+<!--                    <button>x</button>-->
+<!--                </div>-->
+<!--                <ul class="info">-->
+<!--                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>-->
+<!--                    <li>Облачность <span>Broken clouds</span></li>-->
+<!--                    <li>Давление <span>1013 hpa</span></li>-->
+<!--                    <li>Влажность <span>52%</span></li>-->
+<!--                    <li>Координаты <span>[59.88, 30.42]</span></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="city">-->
+<!--                    <h3>Moscow</h3>-->
+<!--                    <span>5˚C</span>-->
+<!--                    <img alt="weather icon" src="clouds-64.ico">-->
+<!--                    <button>x</button>-->
+<!--                </div>-->
+<!--                <ul class="info">-->
+<!--                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>-->
+<!--                    <li>Облачность <span>Broken clouds</span></li>-->
+<!--                    <li>Давление <span>1013 hpa</span></li>-->
+<!--                    <li>Влажность <span>52%</span></li>-->
+<!--                    <li>Координаты <span>[59.88, 30.42]</span></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="city">-->
+<!--                    <h3>Helsinki</h3>-->
+<!--                    <span>3˚C</span>-->
+<!--                    <img alt="weather icon" src="clouds-64.ico">-->
+<!--                    <button>x</button>-->
+<!--                </div>-->
+<!--                <ul class="info">-->
+<!--                    <li>Ветер <span>Moderate breeze, 6.0 m/s, North-northwest</span></li>-->
+<!--                    <li>Облачность <span>Broken clouds</span></li>-->
+<!--                    <li>Давление <span>1013 hpa</span></li>-->
+<!--                    <li>Влажность <span>52%</span></li>-->
+<!--                    <li>Координаты <span>[59.88, 30.42]</span></li>-->
+<!--                </ul>-->
+<!--            </li>-->
         </ul>
     </div>
 </main>
+<script src="app.js"></script>
 </body>
 </html>
