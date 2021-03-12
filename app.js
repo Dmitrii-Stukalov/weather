@@ -108,33 +108,18 @@ const fillChosen = (api) => fetch(api)
 
 
 const reloadChosen = () => {
-    if (navigator.geolocation) {
-        navigator.permissions.query({name: 'geolocation'}).then(permission => {
-                if (permission.state === 'granted') {
-                    navigator.geolocation.getCurrentPosition(position => {
-                        const lon = position.coords.longitude;
-                        const lat = position.coords.latitude;
-                        const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    navigator.geolocation.getCurrentPosition(position => {
+        console.log(position)
+        const lon = position.coords.longitude;
+        const lat = position.coords.latitude;
+        const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
-                        fillChosen(api)
+        fillChosen(api)
 
-                    })
-                } else if (permission.state === 'prompt') {
-                    navigator.geolocation.getCurrentPosition(position => {
-                        const lon = position.coords.longitude;
-                        const lat = position.coords.latitude;
-                        const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
-
-                        fillChosen(api)
-
-                    })
-                    reloadChosen()
-                } else {
-                    fillChosen(`https://api.openweathermap.org/data/2.5/weather?q=london&appid=${apiKey}`)
-                }
-            }
-        )
-    } else alert('Geolocation is not supported')
+    }, _ => {
+        console.log('Denied')
+        fillChosen(`https://api.openweathermap.org/data/2.5/weather?q=london&appid=${apiKey}`)
+    })
 }
 
 window.addEventListener('load', reloadChosen);
