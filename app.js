@@ -2,8 +2,8 @@ const placeholder = `<li>
                         <h2>Подождите, данные загружаются</h2>
                      </li>`
 
-const fillChosen = (api) => fetch(api)
-    .then(response => response.json())
+const fillChosen = api => fetch(api)
+    .then(response => response.ok ? response.json() : Promise.reject('API failed'))
     .then(data => {
         document.querySelector('.wrap .chosen span').textContent = data.temperature
         document.querySelector('.wrap .chosen h2').textContent = data.city
@@ -17,6 +17,9 @@ const fillChosen = (api) => fetch(api)
 
         document.querySelector('.wrap').style.display = 'flex'
         document.querySelector('.placeholder').style.display = 'none'
+    })
+    .catch(err => {
+        alert(err)
     });
 
 
@@ -38,6 +41,7 @@ document.querySelector('header button.desktop').addEventListener('click', reload
 document.querySelector('header button.mobile').addEventListener('click', reloadChosen)
 
 const deleteCity = button => {
+    button.disabled = true
     const city = button.parentNode.childNodes[1].textContent
     fetch('http://localhost:3000/favourites', {
         method: 'delete',
@@ -101,7 +105,7 @@ const onSubmit = event => {
 const addCity = (city, addToStorage = false) => {
     const ul = document.querySelector('.favourite ul')
     ul.insertAdjacentHTML('beforeend', generateCityPlaceholder(city))
-    generateCityLi(city).then(li => {
+    return generateCityLi(city).then(li => {
         if (addToStorage) {
             fetch('http://localhost:3000/favourites', {
                 method: 'post',
@@ -127,7 +131,13 @@ const addCity = (city, addToStorage = false) => {
 const addAllCities = () => {
     fetch('http://localhost:3000/favourites')
         .then(response => response.json())
-        .then(cities => cities.forEach(city => addCity(city)))
+        .then(async cities => {
+                let i = 0;
+                while (i < cities.length) {
+                    await addCity(cities[i]).then(() => i++)
+                }
+            }
+        )
 }
 
 window.addEventListener('load', addAllCities);

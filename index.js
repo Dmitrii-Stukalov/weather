@@ -99,7 +99,7 @@ const weatherToIcon = type => {
             return 'storm-64.ico'
         case type === 'Snow':
             return 'snow-64.ico'
-        case type === 'mist':
+        case type === 'Fog' || type === 'Mist':
             return 'dust-64.ico'
     }
 }
@@ -147,10 +147,8 @@ app.get('/weather/coordinates', (req, res) => {
     const lat = req.query.lat
     const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
     fetch(api)
-        .then(response => response.ok ? response.json() : Promise.reject('City not found'))
-        .then(data => {
-            res.status(200).send(processData(data))
-        })
+        .then(response => response.ok ? response.json() : Promise.reject('Api failed'))
+        .then(data => res.status(200).send(processData(data)))
         .catch(er => res.status(404).send(er))
 })
 
